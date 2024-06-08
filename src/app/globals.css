@@ -116,8 +116,26 @@
   grid-row: 2/span 1;
 }
 
+.footer {
+  width: 100%;
+}
+.footer .footer_log {
+  background: linear-gradient(135deg, rgba(51, 135, 215, 0.6), rgba(9, 49, 87, 0.6)), url("/images/footer-image.png");
+}
+.footer .footer_bookmark {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 400;
+  font-size: 14px;
+  color: grey;
+}
+
 :root {
   font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=globals.css.map */
