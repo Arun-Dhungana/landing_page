@@ -1,15 +1,28 @@
 .footer{
     
     width: 100%;
+    color: white;
     .footer_log{
+        height: 480px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
      background:linear-gradient(135deg, rgba(51, 135, 215, 0.6),rgba(9, 49, 87, 0.6)), url('/images/footer-image.png');
+
+     .footer_links{
+        display: flex;
+        flex-direction: row;
+     }
        }
     .footer_bookmark{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
         font-weight: 400;
         font-size: 14px;
         color: grey;
+        height: 94px;
     }
 }

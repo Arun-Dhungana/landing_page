@@ -1,0 +1,48 @@
+@mixin theme($font: 32px,$weight:600,$color:#24272E) {
+    font-size: $font;
+    box-shadow: $weight;
+    color: $color;
+  }
+
+.whoweare{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 60px;
+   
+    .whoweare_text{
+        width: 368px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 64px;
+        h3{
+            @include theme;
+        }
+        p{
+            @include theme($font: 18px,$weight:400,$color:#505258);
+        }
+      button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: none;
+        background-color: white;
+        text-align: start;
+        @include theme($font: 16px,$weight:700,$color:#1D6FA3);
+        svg{
+            margin-left: 4px;
+        }
+      }
+    }
+    .whoweare_images{
+        
+        display: flex;
+        flex-direction: row;
+       justify-content: center;
+        gap:32px;
+        .whoweare_image2{
+            margin-top: 140px;
+        }
+
+    }
+}
