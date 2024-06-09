@@ -1,0 +1,103 @@
+.latest{
+    background-color: #F9F9FF;
+    height: auto;
+    padding: 80px 0 ;
+    box-sizing: border-box;
+    width: 100%;
+    .latest-heading{
+        width: 768px;
+        
+        gap: 20px;
+        text-align: center;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 48px;
+        
+        h3{
+            
+            font-size: 32px;
+            font-weight: 600;
+        }
+        p{
+            
+            color: #667085;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+    }
+    .latest-cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+         gap:26px;
+        
+        .latest-card{
+           
+            width: 352px;
+            
+            
+            border-radius: 20px;
+            div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                span{
+                    padding: 10px;
+                    background-color: lightblue;
+                    border-radius:12px ;
+                    margin-right: 2px;
+                    color: rgb(222, 36, 222);
+                }
+                padding-left:32px ;
+                color: rgb(137, 132, 132);
+            }
+            header{
+                font-family: 'DM Sans',sans-serif;
+                padding-left:32px ;
+                font-weight: 700;
+                font-size:18px;
+                text-align: start;
+              
+                padding-top: 24px;
+            }
+            p{
+                font-family: 'DM Sans',sans-serif;
+                padding-left:32px ;
+                font-weight: 400;
+                font-size:14px;
+                color: #7C7D82;
+                
+                padding-right: 30px
+            }
+            footer{
+                font-family: 'DM Sans',sans-serif;
+                padding-left:32px ;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-weight: 700;
+                font-size:16px;
+                color:#1D6FA3;
+                gap: 10px;
+            }
+        }
+        
+    
+        
+    }
+   span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button{
+        border: 1px solid #1D6FA3;
+        border-radius: 4px;
+        padding: 10px 16px;
+        background-color:#F9F9FF ;
+        font-weight: 400;
+        font-size: medium;
+        margin-top: 42px;
+        align-self: center;
+    }
+}}
