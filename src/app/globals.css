@@ -131,6 +131,97 @@
   color: grey;
 }
 
+.latest {
+  background-color: #F9F9FF;
+  height: auto;
+  padding: 80px 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.latest .latest-heading {
+  width: 768px;
+  gap: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+.latest .latest-heading h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.latest .latest-heading p {
+  color: #667085;
+  font-size: 20px;
+  font-weight: 400;
+}
+.latest .latest-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 26px;
+}
+.latest .latest-cards .latest-card {
+  width: 352px;
+  border-radius: 20px;
+}
+.latest .latest-cards .latest-card div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 32px;
+  color: rgb(137, 132, 132);
+}
+.latest .latest-cards .latest-card div span {
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 12px;
+  margin-right: 2px;
+  color: rgb(222, 36, 222);
+}
+.latest .latest-cards .latest-card header {
+  font-family: "DM Sans", sans-serif;
+  padding-left: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: start;
+  padding-top: 24px;
+}
+.latest .latest-cards .latest-card p {
+  font-family: "DM Sans", sans-serif;
+  padding-left: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7C7D82;
+  padding-right: 30px;
+}
+.latest .latest-cards .latest-card footer {
+  font-family: "DM Sans", sans-serif;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1D6FA3;
+  gap: 10px;
+}
+.latest span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.latest span button {
+  border: 1px solid #1D6FA3;
+  border-radius: 4px;
+  padding: 10px 16px;
+  background-color: #F9F9FF;
+  font-weight: 400;
+  font-size: medium;
+  margin-top: 42px;
+  align-self: center;
+}
+
 :root {
   font-family: "Inter", sans-serif;
   margin: 0;
