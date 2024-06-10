@@ -9,7 +9,12 @@
     flex-direction: row;
     justify-content: center;
     padding: 60px;
-   
+    @media only screen and  (max-width:992px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
     .whoweare_text{
         width: 368px;
         display: flex;
@@ -33,6 +38,14 @@
             margin-left: 4px;
         }
       }
+      @media only screen and  (max-width:992px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+       margin: 20px auto;
+     
+    }
     }
     .whoweare_images{
         
@@ -40,9 +53,20 @@
         flex-direction: row;
        justify-content: center;
         gap:32px;
+
         .whoweare_image2{
             margin-top: 140px;
+           
         }
+          @media only screen and  (max-width:992px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       text-align: center;
+       .whoweare_image2{
+       margin-top: 0;}
+
+    }
 
     }
 }
