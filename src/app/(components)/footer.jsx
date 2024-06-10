@@ -13,13 +13,13 @@ export const Footer = () => {
             professionals working to ensure that government spending.
           </p>
           <div className="footer_icons">
-            <TwitterIcon></TwitterIcon>
-            <LinkedInIcon></LinkedInIcon>
-            <YouTubeIcon></YouTubeIcon>
+            <TwitterIcon fontSize="large"></TwitterIcon>
+            <LinkedInIcon fontSize="large"></LinkedInIcon>
+            <YouTubeIcon fontSize="large"></YouTubeIcon>
           </div>
         </div>
         <div className="footer_links">
-          <div className="footer_link1">
+          <div className="footer_link">
             <h5>Links</h5>
             <ul>
               <li>Campaigns</li>
@@ -28,7 +28,7 @@ export const Footer = () => {
               <li>About Us</li>
             </ul>
           </div>
-          <div className="footer_link2">
+          <div className="footer_link">
             <h5>Resources</h5>
             <ul>
               <li>Transparency Toolkit</li>
@@ -36,7 +36,7 @@ export const Footer = () => {
               <li>Best Practices</li>
             </ul>
           </div>
-          <div className="footer_link3">
+          <div className="footer_link">
             <h5>Work With Us</h5>
             <ul>
               <li>Contact Us</li>
