@@ -1,9 +1,18 @@
+"use client";
 import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import CancelIcon from "@mui/icons-material/Cancel";
 export const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [shownav, setShownav] = useState(false);
+  const [showSearchBar, setshoeSearchBar] = useState(false);
   return (
     <header className="header">
+      {/* large screen navbar */}
       <nav className="header_navbar">
         <ul>
           <li>
@@ -22,14 +31,82 @@ export const NavBar = () => {
           </li>
         </ul>
         <span>
-          <SearchIcon></SearchIcon>
+          <SearchIcon
+            onClick={() => {
+              setshoeSearchBar(!showSearchBar);
+            }}
+          ></SearchIcon>
         </span>
       </nav>
+      {/* small navbar */}
+      <nav className="header_navbar_small">
+        <Image height={48} width={160} src="/images/Company logo.png"></Image>
+
+        <div className="navbar-search">
+          <input name="search" placeholder="Search..."></input>
+          <SearchIcon></SearchIcon>
+        </div>
+
+        <button
+          type="button"
+          className={isOpen ? "close" : "open"}
+          onClick={() => setShownav(!shownav)}
+        >
+          <MenuIcon></MenuIcon>
+        </button>
+      </nav>
+      <div
+        className={shownav ? "navbar-offcanvas-show" : "navbar-offcanvas-hide"}
+      >
+        <ul>
+          <div className="offcanvas-header">
+            <Image
+              height={48}
+              width={160}
+              src="/images/Company logo.png"
+            ></Image>
+
+            <button
+              type="button"
+              className={isOpen ? "open" : "close"}
+              onClick={() => setShownav(!shownav)}
+            >
+              <CloseIcon></CloseIcon>
+            </button>
+          </div>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Case Studies</li>
+          <li className="resource">
+            Resources <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
+          </li>
+        </ul>
+      </div>
+
+      {/* header content */}
+
       <div className="header_content">
+        {/* {search bar} */}
+        <div className={showSearchBar ? "searchbar" : "close"}>
+          <div className="searchbox" id="searchbar">
+            <input type="text" placeholder="Search..."></input>
+            <div className="search-icon">
+              <SearchIcon></SearchIcon>
+            </div>
+            <div
+              className="close-icon"
+              onClick={() => {
+                setshoeSearchBar(false);
+              }}
+            >
+              <CancelIcon></CancelIcon>
+            </div>
+          </div>
+        </div>
         <h1>Beautiful analytics to grow smarter</h1>
         <p>
           Powerful, self-serve product and growth analytics to help you convert,
-          engage, and retain more users. Trusted by over 4,000 startups.
+          engage, and retain more users. Trusted by over 4,000 ups.
         </p>
         <button type="button">
           Why Catalog?{" "}
