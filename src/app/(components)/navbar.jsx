@@ -6,10 +6,14 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import CancelIcon from "@mui/icons-material/Cancel";
+import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
+import FlashOnIcon from "@mui/icons-material/FlashOn";
+import SlowMotionVideoIcon from "@mui/icons-material/SlowMotionVideo";
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [shownav, setShownav] = useState(false);
   const [showSearchBar, setshoeSearchBar] = useState(false);
+  const [showNavBar, setshowNavBar] = useState(false);
   return (
     <header className="header">
       {/* large screen navbar */}
@@ -26,8 +30,63 @@ export const NavBar = () => {
           <li>Home</li>
           <li>About Us</li>
           <li>Case Studies</li>
-          <li className="resource">
-            Resources <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
+          <li>
+            <div className="resources">
+              <div
+                className="resource-navbar"
+                onClick={() => {
+                  setshowNavBar(!showNavBar);
+                }}
+              >
+                Resources <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
+              </div>
+              <div className={showNavBar ? "resource-dropdown" : "close"}>
+                <div className="resource-items">
+                  <div
+                    className="resource-item"
+                    onClick={() => {
+                      setshowNavBar(false);
+                    }}
+                  >
+                    <div className="resource-icon">
+                      <MobileFriendlyIcon></MobileFriendlyIcon>
+                    </div>
+                    <div className="resource-content">
+                      <h4>Blog</h4>
+                      <p>The latest industry news and info.</p>
+                    </div>
+                  </div>
+                  <div
+                    className="resource-item"
+                    onClick={() => {
+                      setshowNavBar(false);
+                    }}
+                  >
+                    <div className="resource-icon">
+                      <FlashOnIcon></FlashOnIcon>
+                    </div>
+                    <div className="resource-content">
+                      <h4>Customer stories</h4>
+                      <p>Learn how our customer are making big changes.</p>
+                    </div>
+                  </div>
+                  <div
+                    className="resource-item"
+                    onClick={() => {
+                      setshowNavBar(false);
+                    }}
+                  >
+                    <div className="resource-icon">
+                      <SlowMotionVideoIcon></SlowMotionVideoIcon>
+                    </div>
+                    <div className="resource-content">
+                      <h4>Video Tutorials</h4>
+                      <p>Get up and running on new features and techniques.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
         <span>
@@ -77,7 +136,7 @@ export const NavBar = () => {
           <li>Home</li>
           <li>About Us</li>
           <li>Case Studies</li>
-          <li className="resource">
+          <li>
             Resources <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
           </li>
         </ul>

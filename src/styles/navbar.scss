@@ -70,16 +70,87 @@
         flex-direction: row;
         align-items: center;
         gap: 40px;
+        // background-color: #cdcd18;
         li{
           display: flex;
           flex-direction: row;
           align-items: center;
-        text-decoration: none;
-        list-style: none;
-        cursor: pointer;&:hover{
+          text-decoration: none;
+          list-style: none;
+          cursor: pointer;&:hover{
           color: rgb(184, 169, 169);}
-          
+          .resources{
+            position: relative;
+            .close{display: none;}
+            .resource-navbar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            }
+            .resource-dropdown{
+              position: absolute;
+              top:60px;
+              left: -50px;
+              z-index: 20px;
+              border: 1px solid #EAECF0;
+                border-radius: 8px;
+                padding: 24px 20px;
+                background-color: white;
+                color: black;
+                width: 412px;
+                cursor: default;
+              .resource-items{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                gap:30px;
+                .resource-item{
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: start;
+                  cursor: pointer;
+                  margin: 0;
+                  padding: 4px;
+                  border-radius: 8px;
+                 .resource-icon{
+                  color: rgba(5, 110, 238, 0.518);
+                  height: 12px;
+                  width: 12px;
+                  margin-right:50px;
+                 }
+                 .resource-content{
+                  h4{
+                    //styleName: Text md/Semibold;
+                   
+                    font-size: 16px;
+                    font-weight: 600;
+                   
+                    text-align: left;
+                    margin: 0;
+                    padding: 0;
+
+                  }
+                  p{
+                    font-size: 14px;
+                    font-weight: 400;
+                   color: #667085;
+                    text-align: left;
+                  }
+                  
+                 }
+                  &:hover{
+                    background-color: rgb(6, 196, 243);
+                    color: rgb(0, 76, 255);
+                  }
+                 
+                }
+              }
+            }
+          }
        }
+      
      
       }
       span{
