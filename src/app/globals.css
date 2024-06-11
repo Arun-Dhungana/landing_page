@@ -411,6 +411,21 @@ main .uparrow:hover {
   color: #1D6FA3;
   gap: 10px;
 }
+.campaign .campaign-cards .campaign-card footer:hover {
+  cursor: pointer;
+  color: #049bf9;
+}
+.campaign .campaign-cards .campaign-card footer:hover svg {
+  animation: move 0.5s linear infinite;
+}
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
 
 .whoweare {
   display: flex;
@@ -490,9 +505,9 @@ main .uparrow:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  margin-top: 80px;
+  padding: 80px 20px;
   position: relative;
+  background-color: #F9F9FF;
 }
 .container .btn {
   background-color: transparent;
@@ -503,24 +518,30 @@ main .uparrow:hover {
   transform: translateY(-50%);
   z-index: 500;
 }
+.container .btn:hover {
+  color: rgba(77, 28, 3, 0.34);
+}
 .container #prevBtn {
-  left: 0;
+  left: 20px;
 }
 .container #nextBtn {
-  right: 0;
+  right: 20px;
 }
 
 .carousel {
   overflow: hidden;
+  width: 100%;
 }
 
 .item-list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   transition: transform 0.5s ease-in-out;
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .item {
@@ -549,7 +570,6 @@ main .uparrow:hover {
 }
 .news {
   text-align: center;
-  margin: 80px 0;
 }
 .news .news-header h3 {
   font-weight: 600;
@@ -572,6 +592,11 @@ main .uparrow:hover {
   background-color: white;
   font-size: 16px;
   font-weight: 700;
+}
+.news button:hover {
+  background-color: #0395f0;
+  cursor: pointer;
+  color: white;
 }
 
 .news-cards {
@@ -617,11 +642,25 @@ main .uparrow:hover {
 .news-cards .news-card footer svg {
   margin-left: 2px;
 }
+.news-cards .news-card footer:hover {
+  cursor: pointer;
+  color: #049bf9;
+}
+.news-cards .news-card footer:hover svg {
+  animation: move 0.5s linear infinite;
+}
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
 
 .latest {
   background-color: #F9F9FF;
   height: auto;
-  padding: 80px 0;
   box-sizing: border-box;
   width: 100%;
   padding: 80px 0;
@@ -715,6 +754,11 @@ main .uparrow:hover {
   margin-top: 42px;
   align-self: center;
 }
+.latest span button:hover {
+  background-color: #0395f0;
+  cursor: pointer;
+  color: white;
+}
 
 .contact form textarea, .contact form input {
   margin-bottom: 16px;
@@ -793,8 +837,9 @@ main .uparrow:hover {
   cursor: pointer;
 }
 .contact form span button:hover {
-  background-color: rgb(65, 107, 214);
-  color: rgb(228, 231, 237);
+  background-color: #0395f0;
+  cursor: pointer;
+  color: white;
 }
 @media only screen and (max-width: 768px) {
   .contact form {

@@ -3,10 +3,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    margin-top: 80px;
+    padding: 80px 20px;
+    
     position: relative;
-  
+    background-color: #F9F9FF;
     .btn {
     background-color: transparent;
     border: none;
@@ -15,33 +15,41 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 500;
+    &:hover{
+      color: rgba(77, 28, 3, 0.34);
+    }
   }
   #prevBtn {
-    left: 0;
+    left: 20px;
+
   }
   
   #nextBtn {
-    right: 0;
+    right: 20px;
   }
   }
   
   .carousel {
     
    
-    
-    overflow: hidden;
    
+    overflow: hidden;
+    
+    width: 100%;
     
   }
   
   .item-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    
     transition: transform 0.5s ease-in-out;
-    width: 1200px;
-   
+    max-width: 1200px;
+    
     padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     // height: 400px; // Adjust the height as needed
   }
   
@@ -54,7 +62,7 @@
     opacity: 0;
  
     height: 100%;
-  
+    
     &:not(.active) {
       display: none; // Ensure only active items are displayed
     }
@@ -62,6 +70,7 @@
   
   .item.active {
     opacity: 1;
+    
   }
   
   
@@ -77,6 +86,7 @@
   @media (max-width: 480px) {
     .item {
       flex: 0 0 100%;
+      
     }
   }
   

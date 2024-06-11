@@ -1,6 +1,6 @@
 .news{
 text-align: center;
-margin: 80px 0;
+
     .news-header{
         h3{
             font-weight:600;
@@ -31,6 +31,11 @@ margin: 80px 0;
         background-color: white;
         font-size: 16px;
         font-weight: 700;
+        &:hover{
+            background-color: #0395f0;
+            cursor: pointer;
+            color: white;
+        }
 
     }
 }
@@ -77,6 +82,21 @@ margin: 80px 0;
             color:#1D6FA3;
             svg{
                 margin-left: 2px;
+            }
+            &:hover{
+                cursor: pointer;
+                color: #049bf9;
+                svg{
+                    animation: move 0.5s linear  infinite ;
+                 
+                    // animation-play-state: paused;
+                  }
+                  @keyframes move {
+                    from{
+                      transform: translateX(0);
+                    }to{transform: translateX(10px);}
+                    
+                  }
             }
         }
         

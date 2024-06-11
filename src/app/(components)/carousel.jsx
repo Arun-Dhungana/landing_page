@@ -47,8 +47,8 @@ export const Carousel = () => {
                 src={src}
                 alt={`carousel-item-${index}`}
                 objectFit="cover"
-                height={40}
-                width={90}
+                height={50}
+                width={100}
               />
             </div>
           ))}
