@@ -1,28 +1,82 @@
-.carousel{
-  
-    width: 100%;
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow: auto;
-    margin: 0 auto;
-    padding: 80px 0;
-    gap:65px;
-    background-color: #F9F9FF;
-.item-list{
+    padding: 0 20px;
+    margin-top: 80px;
+    position: relative;
+  
+    .btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 500;
+  }
+  #prevBtn {
+    left: 0;
+  }
+  
+  #nextBtn {
+    right: 0;
+  }
+  }
+  
+  .carousel {
+    
+   
+    
+    overflow: hidden;
+   
+    
+  }
+  
+  .item-list {
     display: flex;
     flex-direction: row;
-    gap:65px;
-    scroll-snap-align: center;
-.item{
-    border: none;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    width: 1200px;
+   
+    padding: 0 20px;
+    // height: 400px; // Adjust the height as needed
+  }
+  
+  .item {
     
-}
+    flex: 0 0 25%;
+    
+    
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+ 
+    height: 100%;
+  
+    &:not(.active) {
+      display: none; // Ensure only active items are displayed
+    }
+  }
+  
+  .item.active {
+    opacity: 1;
+  }
+  
+  
+  
 
-}
-.btn{
-    padding: 20px;
-    border: none;
-    background-color:#F9F9FF ;
-}}
+  
+  @media (max-width: 768px) {
+    .item {
+      flex: 0 0 33.33%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .item {
+      flex: 0 0 100%;
+    }
+  }
+  

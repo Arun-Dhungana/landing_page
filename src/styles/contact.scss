@@ -65,6 +65,27 @@ margin: 80px auto;
             }
           
         }
+        span{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            button{
+                border: 1px solid #1D6FA3;
+                border-radius: 4px;
+                padding: 10px 16px;
+                background-color:#F9F9FF ;
+                font-weight: 400;
+                font-size: medium;
+                margin-top: 42px;
+                align-self: center;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(65, 107, 214);
+                    color: rgb(228, 231, 237);
+                  }
+            }
+           
+        }
          @media only screen and  (max-width:768px){
                 
                 padding: 0 20px;

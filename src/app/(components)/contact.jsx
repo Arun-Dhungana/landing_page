@@ -21,6 +21,9 @@ export const Contact = () => {
         <input id="email" type="text"></input>
         <label htmlFor="message">Message</label>
         <textarea id="message"></textarea>
+        <span>
+          <button type="button"> Submit</button>
+        </span>
       </form>
     </div>
   );

@@ -168,7 +168,7 @@ export const NavBar = () => {
           engage, and retain more users. Trusted by over 4,000 ups.
         </p>
         <button type="button">
-          Why Catalog?{" "}
+          Why Catalog?
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"

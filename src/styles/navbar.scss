@@ -273,10 +273,29 @@
          border: 1px solid #FFE500;
          color: white;
          margin-top: 48px;
+         
+         &:hover{
+          cursor: pointer;
+          box-shadow: 0 0 20px yellow;
+          svg{
+            animation: move 0.5s ease-out  infinite ;
+         
+            // animation-play-state: paused;
+          }
+          @keyframes move {
+            from{
+              transform: translateX(0);
+            }to{transform: translateX(16px);}
+            
+          }
+         }
          svg{
             color: white;
             margin-left: 8px;
-         }
+            
+            
+        }
+        
       }
        
       .close{
